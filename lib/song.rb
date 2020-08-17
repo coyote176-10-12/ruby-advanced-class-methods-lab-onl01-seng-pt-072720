@@ -28,6 +28,7 @@ class Song
     song.name=name
     song.save
     song
+  end
   
   
   def song_find_or_create_by_name
