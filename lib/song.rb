@@ -43,8 +43,15 @@ class Song
     @@all.sort_by {|song| song.name}
   end
  
-    
-  
+    def self.new_from_filename(filename)
+    file = filename.split(" - ")
+    artist = file [0]
+    mp3 = file[1].split(".")
+    name =  mp3[0]
+    song = self.new
+    song.name = name
+    song.artist_name = artist
+    song
   end
   
   def song_create_from_filename
